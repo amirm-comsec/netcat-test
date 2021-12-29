@@ -46,3 +46,7 @@ $file_out = $file_in + ".unb64";
 
 
 [IO.File]::WriteAllBytes($file_out, [Convert]::FromBase64String([char[]][IO.File]::ReadAllBytes($file_in)))
+
+
+
+[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("blahblah"))
