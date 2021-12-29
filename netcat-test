@@ -40,4 +40,9 @@ class Netcat:
 
 
 
-[System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($x))
+$file_in = "a.xlsx.txt";
+$file_out = $file_in + ".unb64";
+
+
+
+[IO.File]::WriteAllBytes($file_out, [Convert]::FromBase64String([char[]][IO.File]::ReadAllBytes($file_in)))
